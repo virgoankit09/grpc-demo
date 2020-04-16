@@ -218,22 +218,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586355018259" />
-    <state width="1323" height="52" key="GridCell.Tab.0.bottom" timestamp="1586951492926">
+    <state width="1323" height="45" key="GridCell.Tab.0.bottom" timestamp="1587004908711">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="52" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586951492926" />
-    <state width="1323" height="52" key="GridCell.Tab.0.center" timestamp="1586951492926">
+    <state width="1323" height="45" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587004908711" />
+    <state width="1323" height="45" key="GridCell.Tab.0.center" timestamp="1587004908710">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="52" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586951492926" />
-    <state width="1323" height="52" key="GridCell.Tab.0.left" timestamp="1586951492926">
+    <state width="1323" height="45" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587004908710" />
+    <state width="1323" height="45" key="GridCell.Tab.0.left" timestamp="1587004908710">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="52" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586951492926" />
-    <state width="1323" height="52" key="GridCell.Tab.0.right" timestamp="1586951492926">
+    <state width="1323" height="45" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587004908710" />
+    <state width="1323" height="45" key="GridCell.Tab.0.right" timestamp="1587004908710">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="52" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586951492926" />
+    <state width="1323" height="45" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587004908710" />
     <state width="1323" height="174" key="GridCell.Tab.1.bottom" timestamp="1586950408768">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -270,10 +270,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="391" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1586950746286" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1586855723907">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1587004705854">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586855723907" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1587004705854" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

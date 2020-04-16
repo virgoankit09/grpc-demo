@@ -1,11 +1,8 @@
 package com.example.grpc.blog.server;
 
-import com.mongodb.client.model.Filters;
 import com.proto.blog.*;
 import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
-import org.bson.Document;
-import org.bson.types.ObjectId;
 
 public class BlogServiceSpannerImpl extends BlogServiceGrpc.BlogServiceImplBase {
 
@@ -15,18 +12,26 @@ public class BlogServiceSpannerImpl extends BlogServiceGrpc.BlogServiceImplBase 
         Blog blog = request.getBlog();
 
         System.out.println("Inserting blog..");
+        try{
+            long id = BlogSpannerHelper.writeUsingDml(GoogleCloudSpannerConfig.getINSTANCE().getDbClient(), blog);
 
-        long id = BlogSpannerHelper.writeUsingDml(GoogleCloudSpannerConfig.getINSTANCE().getDbClient(), blog);
-
-        System.out.println("Inserted blog");
-        CreateBlogResponse response = CreateBlogResponse.newBuilder()
-                .setBlog(Blog.newBuilder()
-                        .setAuthorId(blog.getAuthorId())
-                        .setContent(blog.getContent())
-                        .setId(String.valueOf(id))
-                        .setTitle(blog.getTitle()))
-                .build();
-        responseObserver.onNext(response);
+            System.out.println("Inserted blog");
+            CreateBlogResponse response = CreateBlogResponse.newBuilder()
+                    .setBlog(Blog.newBuilder()
+                            .setAuthorId(blog.getAuthorId())
+                            .setContent(blog.getContent())
+                            .setId(String.valueOf(id))
+                            .setTitle(blog.getTitle()))
+                    .build();
+            responseObserver.onNext(response);
+        } catch (Exception e) {
+            e.printStackTrace();
+            responseObserver.onError(
+                    Status.INTERNAL
+                            .withDescription("Error while processing")
+                            .asRuntimeException()
+            );
+        }
         responseObserver.onCompleted();
     }
 
@@ -37,18 +42,26 @@ public class BlogServiceSpannerImpl extends BlogServiceGrpc.BlogServiceImplBase 
         Blog blog = request.getBlog();
 
         System.out.println("updating blog..");
+        try{
+            BlogSpannerHelper.updateUsingDml(GoogleCloudSpannerConfig.getINSTANCE().getDbClient(), blog);
 
-        BlogSpannerHelper.updateUsingDml(GoogleCloudSpannerConfig.getINSTANCE().getDbClient(), blog);
-
-        System.out.println("updated blog");
-        UpdateBlogResponse response = UpdateBlogResponse.newBuilder()
-                .setBlog(Blog.newBuilder()
-                        .setAuthorId(blog.getAuthorId())
-                        .setContent(blog.getContent())
-                        .setId(String.valueOf(blog.getId()))
-                        .setTitle(blog.getTitle()))
-                .build();
-        responseObserver.onNext(response);
+            System.out.println("updated blog");
+            UpdateBlogResponse response = UpdateBlogResponse.newBuilder()
+                    .setBlog(Blog.newBuilder()
+                            .setAuthorId(blog.getAuthorId())
+                            .setContent(blog.getContent())
+                            .setId(String.valueOf(blog.getId()))
+                            .setTitle(blog.getTitle()))
+                    .build();
+            responseObserver.onNext(response);
+        } catch (Exception e) {
+            e.printStackTrace();
+            responseObserver.onError(
+                    Status.INTERNAL
+                            .withDescription("Error while processing")
+                            .asRuntimeException()
+            );
+        }
         responseObserver.onCompleted();
 
     }
@@ -58,12 +71,21 @@ public class BlogServiceSpannerImpl extends BlogServiceGrpc.BlogServiceImplBase 
         System.out.println("Received Delete blog request..");
 
         String id = request.getBlogId();
-        BlogSpannerHelper.deleteUsingDml(GoogleCloudSpannerConfig.getINSTANCE().getDbClient(), id);
+        try{
+            BlogSpannerHelper.deleteUsingDml(GoogleCloudSpannerConfig.getINSTANCE().getDbClient(), id);
 
-        responseObserver.onNext(DeleteBlogResponse.newBuilder()
-                .setBlogId(id)
-                .build());
-        System.out.println("Deleted blog.");
+            responseObserver.onNext(DeleteBlogResponse.newBuilder()
+                    .setBlogId(id)
+                    .build());
+            System.out.println("Deleted blog.");
+        } catch (Exception e) {
+            e.printStackTrace();
+            responseObserver.onError(
+                    Status.INTERNAL
+                            .withDescription("Error while processing")
+                            .asRuntimeException()
+            );
+        }
         responseObserver.onCompleted();
     }
 
@@ -71,10 +93,17 @@ public class BlogServiceSpannerImpl extends BlogServiceGrpc.BlogServiceImplBase 
     public void listBlog(ListBlogRequest request, StreamObserver<ListBlogResponse> responseObserver) {
 
         System.out.println("Recieved List blog request...");
-        BlogSpannerHelper.listBlog(GoogleCloudSpannerConfig.getINSTANCE().getDbClient(), responseObserver);
-
+        try{
+            BlogSpannerHelper.listBlog(GoogleCloudSpannerConfig.getINSTANCE().getDbClient(), responseObserver);
+        } catch (Exception e) {
+            e.printStackTrace();
+            responseObserver.onError(
+                    Status.INTERNAL
+                            .withDescription("Error while processing")
+                            .asRuntimeException()
+            );
+        }
         responseObserver.onCompleted();
-
     }
 
     @Override
@@ -82,9 +111,16 @@ public class BlogServiceSpannerImpl extends BlogServiceGrpc.BlogServiceImplBase 
         System.out.println("Recieved read blog request.");
         String blogId = request.getBlogId();
         System.out.println("searching for blog.");
-
-        BlogSpannerHelper.queryWithParameter(GoogleCloudSpannerConfig.getINSTANCE().getDbClient(), responseObserver, blogId);
-
+        try{
+            BlogSpannerHelper.queryWithParameter(GoogleCloudSpannerConfig.getINSTANCE().getDbClient(), responseObserver, blogId);
+        } catch (Exception e) {
+            e.printStackTrace();
+            responseObserver.onError(
+                    Status.INTERNAL
+                            .withDescription("Error while processing")
+                            .asRuntimeException()
+            );
+        }
         responseObserver.onCompleted();
     }
 }

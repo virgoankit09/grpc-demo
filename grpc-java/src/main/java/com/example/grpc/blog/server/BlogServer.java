@@ -9,7 +9,7 @@ import java.io.IOException;
 public class BlogServer {
 
     public static void main(String[] args) throws IOException, InterruptedException {
-
+        System.out.println("Starting server...");
         Server server = ServerBuilder.forPort(50051)
                 //.addService(new BlogServiceImpl()) //mongo
                 .addService(new BlogServiceSpannerImpl()) //spanner
@@ -17,7 +17,7 @@ public class BlogServer {
                 .build();
 
         server.start();
-
+        System.out.println("Server Started...");
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             System.out.println("Recieved shut down request.");
             server.shutdown();
