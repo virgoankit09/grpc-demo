@@ -17,19 +17,19 @@ public class GoogleCloudSpannerConfig {
 
     private GoogleCloudSpannerConfig() {
         try {
-            File credentialsPath = new File("C:\\Workspace-2\\grpc-java\\src\\main\\resources\\teak-amphora-274106-7bc0884fc808.json");
+            File credentialsPath = new File("C:\\Workspace-2\\grpc-java\\src\\main\\resources\\linen-marking-274806-2e0a3699f7e7.json");
             GoogleCredentials credentials;
             FileInputStream serviceAccountStream = new FileInputStream(credentialsPath);
             credentials = ServiceAccountCredentials.fromStream(serviceAccountStream);
 
             SpannerOptions options = SpannerOptions.newBuilder()
-                    .setProjectId("teak-amphora-274106")
+                    .setProjectId("linen-marking-274806")
                     .setCredentials(credentials)
                     .build();
             Spanner spanner = options.getService();
 
             //String command = args[0];
-            DatabaseId db = DatabaseId.of("teak-amphora-274106", "test-spanner", "testdb");
+            DatabaseId db = DatabaseId.of("linen-marking-274806", "test-spanner", "testdb");
             this.dbClient = spanner.getDatabaseClient(db);
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "linen-marking-274806",
+  "private_key_id": "2e0a3699f7e76a6c5829cf513ae9154d380d9ce1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCPXKS6hZvCx2AY\nr7FzYPwIR3+J/36wDAqcy4SYcQf8eePSuSmjIBoHFBsJhd8LzP9b9wwifu+leMfv\nz21K/r3reg8coKfCduzpx1AcJuWcAZClDpxASwWntF3fdHkxz2LuI3mbe4WCrSGc\nHAgVHc8RBlNasSiuu800pCX0Vnw6CxEJWTDTbva++zTlNMgDsn1EiVWs6CkjWZWy\nwYW/QvJ5dkiKEGCiKkuU509XaXFYb1fla8C4iu/5Ny0iKp5WSf7BF9UiHOgFTQk6\nf+ZMwz2NAp4lTyMMZrLMAmmVws2GjYTAhCOYxdeqSOvJvOupIE284uwxLldF9oni\nA1lazK6bAgMBAAECggEAAUrFy/iQTX0b3J0YwwAeGrpU5/ApkCSg+TDMYnis/cA2\nJsa3HVqYtspI7sO0yEJyEBN17zRTAfFzZoc+u5ei1pB5umRS9BRmUOUUT8H5/SH2\nenEF735oRU6sL0C5fD1w7XyHCA5g8as7IPu6XEEHMLwXMZC5286i1tVJPPPamBtQ\no+UnZfFzWWSnOL02ApaI2vJW2C/AYEcWx/HT9BtPLDldElZ8zcfijc260BsQJR9t\nfc18ez+MhUC+WPqhhCEfTiOCnBhu5LmjD4z70bB156g4Lk8+cqFCDaJS3hHln9H2\nMtBNg1lLuxF3cJNkfm7BS+En2qrnXZQZRsVQ7chIwQKBgQDB4ZMuAx7o2bMhS2Pu\nSEzc9J7f5DZs7qFgO+2rlSRke9ddqUyUKFutDOLrKpOe1qRHkVC3Q8Q6P5C/kKgQ\nkqSMc5MhVtF1/++9nuY91+oIpZtF5BoHdbWL7K/wKTkfoEKLjLtFNaDK3Sa7N2pE\nZXV7xHmne3M/+Acit0j54pg6UwKBgQC9S2b3pcJ97V7s24GlO3MooJcMF+TsKDzz\nbVFLvvQangnXXAs/72VM5YKt7QiRIFEnfQAK3xe2iI98bK34DaB9mk/KgJXaHWfK\nOetpdwnsnj+KlvuR0cNZDM+oD776A12/FBKyCqrwU9aOdVtvkyl+MSLh+CWx93xS\n2m9hBBqBmQKBgCbGaXwTTbQ+DdBD1qmKNi0ek0OtzaC9nPK1KZReUJf0GJ93w4QC\nCkuyvxNPQZTL0rEpg94TJISNv/JACQy/dz9Lwgox5dRWqmjfBacqrniqPkKdGwOQ\n7A0e+hTq+ay0jXqBW9a8ofrQffWFYLBrJjLpmXcAfo01mp+7zlGDmvRXAoGBAIJ2\nJVEo/RKtNm8oGgI3JvcpNvEuxqe8U8Wx4gXCZZqysTWsSlSWOcr1o0sbwnvDOitt\nC0py13UGSV4HyR7cxW/LmpKGbMEW4yGNKaJWWJCrwD9UL64gU/Jb0gKSV50YFNRM\nkVYD5CwenBEy8QHE+yPt2YzD6bbuStEPmxPSMDKBAoGAU/bJfBPiP2/DM9xprY6B\nEa5VY3qjug5H63Y09mdZ90Voc9DA7sbL5lo34MowhMLmxZ2sThOElnRGGFek1LHd\nw6bZvA0Ehi3tI8UQ6DolrhVVMYnqePss48nNoYA3EAF2nPApAaXJROIt0x0aNHkA\nHpo7FYyqS+Ur9he5P0BbMss=\n-----END PRIVATE KEY-----\n",
+  "client_email": "spanner-db@linen-marking-274806.iam.gserviceaccount.com",
+  "client_id": "118320898681788019570",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/spanner-db%40linen-marking-274806.iam.gserviceaccount.com"
+}

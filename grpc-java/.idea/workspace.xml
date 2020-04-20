@@ -151,16 +151,16 @@
       <item itemvalue="Application.BlogClient" />
       <item itemvalue="Application.BlogServer" />
       <item itemvalue="Application.SpannerDemo" />
-      <item itemvalue="Gradle.grpc-java [generateProto]" />
       <item itemvalue="Application.SpannerTest" />
+      <item itemvalue="Gradle.grpc-java [generateProto]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BlogServer" />
         <item itemvalue="Application.SpannerTest" />
         <item itemvalue="Application.SpannerDemo" />
         <item itemvalue="Gradle.grpc-java [generateProto]" />
         <item itemvalue="Application.BlogClient" />
-        <item itemvalue="Application.BlogServer" />
       </list>
     </recent_temporary>
   </component>
